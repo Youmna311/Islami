@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.AhadethFragment"
+    android:background="@drawable/defaultbackground">
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ahadethphoto"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/hadethlogo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="hadethfragmentslamitv" />-->
+
+    <ImageView
+        android:id="@+id/ahadethphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/hadethlogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:adjustViewBounds="true"
+        app:layout_constraintHeight_percent="0.3"/>
+    <View
+        android:id="@+id/upline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/begige"
+        app:layout_constraintTop_toBottomOf="@id/ahadethphoto"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/ahadethes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/upline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="الأحاديث"
+        android:textSize="26sp"
+        />
+    <View
+        android:id="@+id/downline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/begige"
+        app:layout_constraintTop_toBottomOf="@id/ahadethes"
+        android:layout_margin="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ahadethrv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/downline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/ahadeth_template"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

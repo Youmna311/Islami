@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/quranic" android:title="quran" android:icon="@drawable/quran" />
+    <item android:id="@+id/ahadethic" android:title="ahadeth" android:icon="@drawable/ahadeth"/>
+    <item android:id="@+id/sebhaic" android:title="sebha" android:icon="@drawable/sebha"/>
+    <item android:id="@+id/radioic" android:title="radio" android:icon="@drawable/radio"/>
+
+</menu>
